@@ -2,7 +2,7 @@
 
 export const registrationRequest = async (data) => {
   try {
-    const response = await fetch("https://sa.bakare.tech/api/v1/user", {
+    const response = await fetch("https://scpc-voting-api.onrender.com/api/v1/user", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -18,12 +18,12 @@ export const registrationRequest = async (data) => {
   } catch (error) {}
 };
 
-//   `https://sa.bakare.tech/api/v1/user/validate/${token}`,
+//   `https://scpc-voting-api.onrender.com/api/v1/user/validate/${token}`,
 
 export const categoryRequest = async () => {
   try {
     const response = await fetch(
-      `https://sa.bakare.tech/api/v1/election/categories`,
+      `https://scpc-voting-api.onrender.com/api/v1/election/categories`,
       {
         method: "GET",
         headers: {
@@ -38,7 +38,7 @@ export const categoryRequest = async () => {
 };
 
 export const validateStudent = async (token) => {
-  const apiUrl = `https://sa.bakare.tech/api/v1/user/validate/${token}`;
+  const apiUrl = `https://scpc-voting-api.onrender.com/api/v1/user/validate/${token}`;
   try {
     const response = await fetch(apiUrl, {
       method: "GET",
@@ -55,7 +55,7 @@ export const validateStudent = async (token) => {
 };
 
 export const nomineeRequest = async (nomineeId) => {
-  const apiUrl = `https://sa.bakare.tech/api/v1/election/category/nominees/${nomineeId}`;
+  const apiUrl = `https://scpc-voting-api.onrender.com/api/v1/election/category/nominees/${nomineeId}`;
   try {
     const response = await fetch(apiUrl, {
       method: "GET",
@@ -71,7 +71,7 @@ export const nomineeRequest = async (nomineeId) => {
 };
 
 export const vote = async (votingData) => {
-  const apiUrl = `https://sa.bakare.tech/api/v1/election/vote`;
+  const apiUrl = `https://scpc-voting-api.onrender.com/api/v1/election/vote`;
   try {
     const response = await fetch(apiUrl, {
       method: "POST",
